@@ -1,0 +1,27 @@
+Exercise 2: Shift Instructions
+Write a program to multiply any given number by 7. Store the final result in register a0. You
+must use shift instructions for this exercise.
+
+
+Method 1
+
+.globl main
+main:
+# Load immediate values into registers
+li a3, 5 # Load 5 into register a3
+slli a1,a3,3 # Multiply by 8
+sub a0,a1,a3 #sub the given number
+ret
+
+Method 2
+
+.globl main
+main:
+# Load immediate values into registers
+li a3, 10 # Load 10 into register a3
+slli a1,a3,1 # Multiply by 2
+slli a2,a1,1 # Multiply by 2
+add a4,a1,a2 # a4 = a1+a2
+add a0,a4,a3 # a0 = a3+a4 
+
+ret

@@ -1,0 +1,18 @@
+Exercise 1: R-Type Instructions
+Write a program to check whether a number is an odd number or not. Store the final output in
+register a0 - it should be set to 1 if the number is odd, otherwise 0.
+Hint: You may need the following R-type instructions for this exercise:
+● AND
+● Set Less Than
+
+
+.globl main
+main:
+# Load immediate values into registers
+li a3, 4 # Load 5 into register a3
+li a4, 1 # Load 1 into register a4
+li a1, 0 # Load 0 into register a1
+and a2, a3, a4
+slt a0, a1, a2
+# End of program
+ret
